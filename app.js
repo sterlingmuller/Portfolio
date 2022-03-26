@@ -9,7 +9,7 @@ app.use((req, res, next) => {
   next();
 })
 
-app.use('/', express.static(__dirname + '/dist'));
+app.use('/', express.static(__dirname + '/client/dist'));
 
 app.listen(port, (err) => {
   if (err) {
