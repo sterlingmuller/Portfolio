@@ -1,34 +1,27 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 export const Header = () => {
-  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
-  function projectsClick() {
-    navigate("/projects");
-  }
-
-  function connectClick() {
-    navigate("/connect");
-  }
-
-  function musicClick() {
-    navigate("/music");
-  }
-
-  function homeClick() {
-    navigate("/home");
-  }
-
+  console.log('page:::', pathname)
   return (
     <div>
       <h1>All About Sterling</h1>
-      <div>
-        <input type="button" onClick={() => homeClick()} value="Home" />
-        <input type="button" onClick={() => projectsClick()} value="Projects"/>
-        <input type="button" onClick={()=> musicClick()} value="Music" />
-        <input type="button" onClick={() => connectClick()} value="Connect" />
+      <div className='header'>
+        <Link to='/home' className='headerLink'>Home
+        <div className={`${pathname === '/' || pathname === '/home' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        </Link>
+        <Link to='/projects' className='headerLink'>Projects
+        <div className={`${pathname === '/projects' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        </Link>
+        <Link to='/music' className='headerLink'>Music
+        <div className={`${pathname === '/music' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        </Link>
+        <Link to='/connect' className='headerLink'>Connect
+        <div className={`${pathname === '/connect' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        </Link>
       </div>
     </div>
   )
