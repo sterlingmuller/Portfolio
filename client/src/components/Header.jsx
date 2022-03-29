@@ -8,21 +8,21 @@ export const Header = () => {
   console.log('page:::', pathname)
   return (
     <div>
-      <h1>All About Sterling</h1>
-      <div className='header'>
-        <Link to='/home' className='headerLink'>Home
-        <div className={`${pathname === '/' || pathname === '/home' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+      <span className='header'>
+        <Link to='/home' className='headerLink home'>Home
+        <div className={`${pathname === '/' || pathname === '/home' ? 'link-indicator-selected' : 'link-indicator'}`}>•</div>
         </Link> /
-        <Link to='/projects' className='headerLink'>Projects
-        <div className={`${pathname === '/projects' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        <Link to='/projects' className='headerLink projects'>Projects
+        <div className={`${pathname === '/projects' ? 'link-indicator-selected' : 'link-indicator'}`}>•</div>
         </Link> /
-        <Link to='/music' className='headerLink'>Music
-        <div className={`${pathname === '/music' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        <Link to='/music' className='headerLink music'>Music
+        <div className={`${pathname === '/music' ? 'link-indicator-selected' : 'link-indicator'}`}>•</div>
         </Link> /
-        <Link to='/connect' className='headerLink'>Connect
-        <div className={`${pathname === '/connect' ? 'link-indicator-selected' : 'link-indicator'}`}>.</div>
+        <Link to='/connect' className='headerLink connect'>Connect
+        <div className={`${pathname === '/connect' ? 'link-indicator-selected' : 'link-indicator'}`}>•</div>
         </Link>
-      </div>
+      </span>
+      <h1>All About Sterling</h1>
     </div>
   )
 }

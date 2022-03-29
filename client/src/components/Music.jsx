@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-import { MainContext } from '../MainContext';
+import React from 'react';
 
 export const Music = () => {
 

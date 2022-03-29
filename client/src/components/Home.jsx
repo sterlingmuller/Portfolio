@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { MainContext } from '../MainContext.js';
-import { useNavigate } from "react-router-dom";
+import React from 'react';
 
 export const Home = () => {
 
   return (
     <div>
+      <span className="container">
+      <img src={'./photo.jpg'} className="photo"></img>
+      </span>
+      <span className="bio">
       <p>Welcome to my home. <br/>
         Take off your shoes and stay awhile
       </p>
@@ -21,6 +23,7 @@ export const Home = () => {
       Software engineering is basically magic and was pioneered by people way smarter than me. I’m constantly amazed by stories of how the computer for the moon landing was coded with punch cards or how Alan Turing built a chessbot too complex for any computer at the time to run. It's amazing that now, anybody can learn to code and we’re truly standing on the shoulders of giants.
 Obviously, I'm no Turing, but I'm always eager to learn new things and love putting passion into what I create.
       </p>
+      </span>
     </div>
   )
 }
