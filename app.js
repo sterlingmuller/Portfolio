@@ -5,10 +5,10 @@ const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
-app.use('/', express.static(__dirname + '../client/dist'));
+app.use('/', express.static(__dirname + '/client/dist'));
 
 app.get('/*', function(req, res) {
-  res.sendFile('/client/dist/index.html', {root: __dirname})
+  res.sendFile(path.join(__dirname + '/client/dist/index.html'))
 })
 
 app.listen(port, (err) => {
