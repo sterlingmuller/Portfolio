@@ -14,9 +14,7 @@ export const Home = () => {
       <img src={'./photo.jpg'} className={wiggle ? "photo wiggle" : "photo"}></img>
       </div>
       <div className="bio">
-      <p>Welcome to my
-        <span style={{ 'color': '#f3989e', 'fontWeight': 'bold'}}> home</span>
-        . Take off your shoes and stay awhile.
+      <p>Welcome to my home. Take off your shoes and stay awhile.
       </p>
       <p>
       My name is
