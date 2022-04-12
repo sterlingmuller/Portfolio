@@ -14,7 +14,7 @@ export const Projects = () => {
     <div className="card-grid">
       <div className="proj-card">
         <div className='card-image'>
-          <img src={"./thumbsUp.png"} onClick={(e) => handleClick(e)}></img>
+          <img src={"./ThumbsUp.png"} onClick={(e) => handleClick(e)}></img>
         </div>
         <div className="card-body">
           <h2 className="title">Thumbs Up</h2>
