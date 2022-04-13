@@ -10,6 +10,8 @@ export const Connect = () => {
       <span> or I'd be happy to connect on </span>
       <a className='connect-link' href='https://www.linkedin.com/in/sterlingmuller/' target='_blank'>LinkedIn</a>
       .
+      <span>More of my work can be found on </span>
+      <a className='connect-link' href='https://github.com/sterlingmuller' target='_blank'>Github</a>
     </div>
   )
 }
