@@ -7,9 +7,9 @@ app.use(express.json());
 
 app.use('/', express.static(__dirname + '/client/dist'));
 
-// app.get('/*', function(req, res) {
-//   res.sendFile(path.join(__dirname + '/client/dist/index.html'))
-// })
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/client/dist/index.html'))
+})
 
 app.listen(port, (err) => {
   if (err) {
